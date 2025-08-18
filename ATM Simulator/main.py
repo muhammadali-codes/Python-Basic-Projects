@@ -1,4 +1,4 @@
-accounts = {}  # Store users {email: {password: "pass", balance: 0}}
+accounts = {}  
 
 def main_menu():
     while True:
@@ -57,7 +57,7 @@ def atm_menu(email):
         if choice == "1":
             print(f"Your balance: {accounts[email]['balance']}")
 
-        elif choice == "2":  # Deposit
+        elif choice == "2":  
             try:
                 amount = int(input("Enter amount to deposit: "))
                 if amount > 0:
@@ -68,7 +68,7 @@ def atm_menu(email):
             except ValueError:
                 print("Invalid input! Please enter numbers only.")
 
-        elif choice == "3":  # Withdraw
+        elif choice == "3":  
             try:
                 amount = int(input("Enter amount to withdraw: "))
                 if amount > 0:
